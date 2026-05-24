@@ -1,0 +1,376 @@
+general:
+  # Commands to run when the WM has started (e.g. to run a script or launch
+  # another application). Here we are running a batch script to start Yasb.
+  startup_commands: ["shell-exec C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Yasb.lnk"]
+
+  # Whether to automatically focus windows underneath the cursor.
+  focus_follows_cursor: true
+
+  # Whether to switch back and forth between the previously focused
+  # workspace when focusing the current workspace.
+  toggle_workspace_on_refocus: false
+
+  cursor_jump:
+    # Whether to automatically move the cursor on the specified trigger.
+    enabled: true
+
+    # Trigger for cursor jump:
+    # - 'monitor_focus': Jump when focus changes between monitors.
+    # - 'window_focus': Jump when focus changes between windows.
+    trigger: "monitor_focus"
+
+     # How windows should be hidden when switching workspaces.
+  # - 'cloak': Recommended. Hides windows with no animation.
+  # - 'hide': Legacy method (v3.5 and earlier) that has a brief animation,
+  # but has stability issues with some apps.
+  hide_method: "cloak"
+
+  # Affects which windows get shown in the native Windows taskbar. Has no
+  # effect if `hide_method: 'hide'`.
+  # - 'true': Show all windows (regardless of workspace).
+  # - 'false': Only show windows from the currently shown workspaces.
+  show_all_in_taskbar: false
+
+gaps:
+  # Gap between adjacent windows.
+  inner_gap: "15px"
+
+  # Gap between windows and the screen edge.
+  outer_gap:
+    top: "10px"
+    right: "15px"
+    bottom: "15px"
+    left: "15px"
+
+window_effects:
+  # Visual effects to apply to the focused window.
+  focused_window:
+    # Highlight the window with a colored border.
+    # ** Exclusive to Windows 11 due to API limitations.
+    border:
+      enabled: true
+      color: "#cba6f7"
+
+    hide_title_bar:
+      enabled: false
+
+    corner_style:
+      enabled: false
+      style: 'square'
+
+    transparency:
+      enabled: false
+      opacity: '95%'
+
+  # Visual effects to apply to non-focused windows.
+  other_windows:
+    border:
+      enabled: true
+      color: "#6c7086"
+    
+    hide_title_bar:
+      enabled: false
+
+    corner_style:
+      enabled: false
+      style: 'square'
+      
+    transparency:
+      enabled: false
+      opacity: '0%'
+
+window_behavior:
+  # New windows are created in this state whenever possible.
+  # Allowed values: 'tiling', 'floating'.
+  initial_state: "tiling"
+
+  # Sets the default options for when a new window is created. This also
+  # changes the defaults for when the state change commands, like
+  # `set-floating`, are used without any flags.
+  state_defaults:
+    floating:
+      # Whether to center floating windows by default.
+      centered: true
+
+      # Whether to show floating windows as always on top.
+      shown_on_top: true
+
+    fullscreen:
+      # Maximize the window if possible. If the window doesn't have a
+      # maximize button, then it'll be fullscreen'ed normally instead.
+      maximized: false
+
+      # Whether to show fullscreen windows as always on top.
+      shown_on_top: false
+
+workspaces:
+  - name: "1"
+    display_name: "1"
+    keep_alive: true
+  - name: "2"
+    display_name: "2"
+    keep_alive: true
+  - name: "3"
+    display_name: "3"
+    keep_alive: true
+  - name: "4"
+    display_name: "4"
+  - name: "5"
+    display_name: "5"
+  - name: "6"
+    display_name: "6"
+  - name: "7"
+    display_name: "7"
+  - name: "8"
+    display_name: "8"
+  - name: "9"
+    display_name: "9"
+
+window_rules:
+  - commands: ["ignore"]
+    match:
+      # Ignores picture-in-picture windows for browsers.
+      - window_title: { regex: "[Pp]icture.in.[Pp]icture" }
+        window_class: { regex: "Chrome_WidgetWin_1|MozillaDialogClass" }
+
+      # Ignore rules for various 3rd-party apps.
+      - window_process: { equals: "PowerToys.PowerAccent" }
+        window_class: { regex: "HwndWrapper*" }
+
+  - commands: ["toggle-floating --centered"]
+    match:
+      - window_class: { regex: "WinUIDesktopWin32WindowClass" }
+      - window_process: { equals: "AutoHotkey64" }
+        window_title: { equals: "Windows Utilities Settings" }
+      - window_process: { equals: "AutoHotkey64" }
+        window_title: { equals: "⚙️ Path Selector Settings" }
+      - window_process: { equals: "AutoHotkey64" }
+        window_title: { equals: "Text Expander Settings" }
+
+binding_modes:
+  # Resize mode (Omarchy uses Super+=/- for resize, but this provides
+  # an alternative vim-style resize mode).
+  - name: 'resize'
+    keybindings:
+      - commands: ['resize --width -2%']
+        bindings: ['h', 'left']
+      - commands: ['resize --width +2%']
+        bindings: ['l', 'right']
+      - commands: ['resize --height +2%']
+        bindings: ['k', 'up']
+      - commands: ['resize --height -2%']
+        bindings: ['j', 'down']
+      - commands: ['wm-disable-binding-mode --name resize']
+        bindings: ['escape', 'enter']
+
+keybindings:
+  # ===================================================================
+  # WINDOW MANAGEMENT (Omarchy: Super → Alt)
+  # ===================================================================
+
+  # Close window — Omarchy: Super + W
+  - commands: ['close']
+    bindings: ['alt+w']
+
+  # Toggle tiling direction (split) — Omarchy: Super + J
+  # NOTE: If alt+j doesn't work, try alt+v instead, or check if another
+  # app is intercepting this shortcut. The command itself is valid.
+  - commands: ['toggle-tiling-direction']
+    bindings: ['alt+j']
+
+  # Toggle floating/tiling — Omarchy: Super + T
+  - commands: ['toggle-tiling']
+    bindings: ['alt+t']
+
+  # Toggle floating (centered) — Omarchy: Super + Shift + V
+  - commands: ['toggle-floating --centered']
+    bindings: ['alt+shift+v']
+
+  # Toggle fullscreen — Omarchy: Super + F
+  - commands: ['toggle-fullscreen']
+    bindings: ['alt+f']
+
+  # Minimize — no direct Omarchy equivalent, but useful
+  - commands: ['toggle-minimized']
+    bindings: ['alt+m']
+
+  # ===================================================================
+  # FOCUS NAVIGATION (Omarchy: Super + Arrows)
+  # ===================================================================
+
+  - commands: ['focus --direction left']
+    bindings: ['alt+left']
+  - commands: ['focus --direction right']
+    bindings: ['alt+right']
+  - commands: ['focus --direction up']
+    bindings: ['alt+up']
+  - commands: ['focus --direction down']
+    bindings: ['alt+down']
+
+  # ===================================================================
+  # SWAP/MOVE WINDOW (Omarchy: Super + Shift + Arrows)
+  # ===================================================================
+
+  - commands: ['move --direction left']
+    bindings: ['alt+shift+left']
+  - commands: ['move --direction right']
+    bindings: ['alt+shift+right']
+  - commands: ['move --direction up']
+    bindings: ['alt+shift+up']
+  - commands: ['move --direction down']
+    bindings: ['alt+shift+down']
+
+  # ===================================================================
+  # RESIZE (Omarchy: Super + =/- and Super + Shift + =/-)
+  # ===================================================================
+
+  # Grow/shrink width — Omarchy: Super + Equal / Super + Minus
+  - commands: ['resize --width +2%']
+    bindings: ['alt+oem_plus']
+  - commands: ['resize --width -2%']
+    bindings: ['alt+oem_minus']
+
+  # Grow/shrink height — Omarchy: Super + Shift + Equal / Super + Shift + Minus
+  - commands: ['resize --height +2%']
+    bindings: ['alt+shift+oem_plus']
+  - commands: ['resize --height -2%']
+    bindings: ['alt+shift+oem_minus']
+
+  # Alternative: enter resize binding mode
+  - commands: ['wm-enable-binding-mode --name resize']
+    bindings: ['alt+r']
+
+  # ===================================================================
+  # WORKSPACE NAVIGATION (Omarchy: Super + 1-9/0)
+  # ===================================================================
+
+  - commands: ['focus --workspace 1']
+    bindings: ['alt+1']
+  - commands: ['focus --workspace 2']
+    bindings: ['alt+2']
+  - commands: ['focus --workspace 3']
+    bindings: ['alt+3']
+  - commands: ['focus --workspace 4']
+    bindings: ['alt+4']
+  - commands: ['focus --workspace 5']
+    bindings: ['alt+5']
+  - commands: ['focus --workspace 6']
+    bindings: ['alt+6']
+  - commands: ['focus --workspace 7']
+    bindings: ['alt+7']
+  - commands: ['focus --workspace 8']
+    bindings: ['alt+8']
+  - commands: ['focus --workspace 9']
+    bindings: ['alt+9']
+  - commands: ['focus --workspace 10']
+    bindings: ['alt+0']
+
+  # Next/prev workspace — Omarchy: Super + Tab / Super + Shift + Tab
+  - commands: ['focus --next-active-workspace']
+    bindings: ['alt+tab']
+  - commands: ['focus --prev-active-workspace']
+    bindings: ['alt+shift+tab']
+
+  # Former/recent workspace — Omarchy: Super + Ctrl + Tab
+  - commands: ['focus --recent-workspace']
+    bindings: ['alt+ctrl+tab']
+
+  # ===================================================================
+  # MOVE WINDOW TO WORKSPACE (Omarchy: Super + Shift + 1-9/0)
+  # Omarchy follows the window to the new workspace, so we do the same.
+  # ===================================================================
+
+  - commands: ['move --workspace 1', 'focus --workspace 1']
+    bindings: ['alt+shift+1']
+  - commands: ['move --workspace 2', 'focus --workspace 2']
+    bindings: ['alt+shift+2']
+  - commands: ['move --workspace 3', 'focus --workspace 3']
+    bindings: ['alt+shift+3']
+  - commands: ['move --workspace 4', 'focus --workspace 4']
+    bindings: ['alt+shift+4']
+  - commands: ['move --workspace 5', 'focus --workspace 5']
+    bindings: ['alt+shift+5']
+  - commands: ['move --workspace 6', 'focus --workspace 6']
+    bindings: ['alt+shift+6']
+  - commands: ['move --workspace 7', 'focus --workspace 7']
+    bindings: ['alt+shift+7']
+  - commands: ['move --workspace 8', 'focus --workspace 8']
+    bindings: ['alt+shift+8']
+  - commands: ['move --workspace 9', 'focus --workspace 9']
+    bindings: ['alt+shift+9']
+  - commands: ['move --workspace 10', 'focus --workspace 10']
+    bindings: ['alt+shift+0']
+
+  # ===================================================================
+  # MOVE WORKSPACE TO MONITOR (Omarchy: Super + Shift + Alt + Arrows)
+  # ===================================================================
+
+  - commands: ['move-workspace --direction left']
+    bindings: ['alt+shift+ctrl+left']
+  - commands: ['move-workspace --direction right']
+    bindings: ['alt+shift+ctrl+right']
+  - commands: ['move-workspace --direction up']
+    bindings: ['alt+shift+ctrl+up']
+  - commands: ['move-workspace --direction down']
+    bindings: ['alt+shift+ctrl+down']
+
+  # ===================================================================
+  # APP LAUNCHING (Omarchy: Super + Shift + Letter)
+  # ===================================================================
+
+  # Terminal — Omarchy: Super + Return
+  - commands: ['shell-exec wt -f']
+    bindings: ['alt+enter']
+
+  # Browser (Zen) — Omarchy: Super + Shift + B
+  - commands: ['shell-exec zen']
+    bindings: ['alt+shift+b']
+
+  # Email (Outlook) — Omarchy: Super + Shift + E
+  - commands: ['shell-exec olk.exe']
+    bindings: ['alt+shift+e']
+
+  # Calendar (Outlook) — Omarchy: Super + Shift + C
+  # Opens Outlook to calendar view
+  - commands: ['shell-exec msedge --app=https://outlook.office365.com/calendar']
+    bindings: ['alt+shift+c']
+
+  # Messaging (Teams) — Omarchy: Super + Shift + G
+  - commands: ['shell-exec ms-teams']
+    bindings: ['alt+shift+g']
+
+  # AI (Gemini) — Omarchy: Super + Shift + A
+  - commands: ['shell-exec msedge --app=https://gemini.google.com/app']
+    bindings: ['alt+shift+a']
+
+  # File Manager (Explorer) — Omarchy: Super + Shift + F
+  - commands: ['shell-exec explorer']
+    bindings: ['alt+shift+f']
+
+  # Obsidian — Omarchy: Super + Shift + O
+  - commands: ['shell-exec Obsidian']
+    bindings: ['alt+shift+o']
+
+  # Editor (VS Code) — Omarchy: Super + Shift + N
+  - commands: ['shell-exec code']
+    bindings: ['alt+shift+n']
+
+  # ===================================================================
+  # WM CONTROLS
+  # ===================================================================
+
+  # Pause WM
+  - commands: ['wm-toggle-pause']
+    bindings: ['alt+shift+p']
+
+  # Reload config
+  - commands: ['wm-reload-config']
+    bindings: ['alt+shift+r']
+
+  # Exit WM — moved to alt+ctrl+q to free alt+shift+e for Outlook
+  - commands: ['wm-exit']
+    bindings: ['alt+ctrl+q']
+
+  # Redraw all windows
+  - commands: ['wm-redraw']
+    bindings: ['alt+ctrl+w']
