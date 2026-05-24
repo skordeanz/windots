@@ -98,7 +98,7 @@ Here's all the information about my setup:
 | **Text Editor**              		     | [VSCode](https://code.visualstudio.com/) [⚙️](configs/vscode/settings.json) |
 | **Media Player**              		 | [qBittorrent](https://www.qbittorrent.org/) [⚙️](configs/qbittorrent/catppuccin-mocha.qbtheme) |
 | **Video Player**              		 | [mpv](https://mpv.io/) [⚙️](configs/mpvplayer/portable_config/) |
-| **Web Browser**               	 	 | [Firefox](https://www.mozilla.org/firefox/) [⚙️](configs/browser/) |
+| **Web Browser**               	 	 | [Zen Browser](https://zen-browser.app/) [⚙️](configs/browser/) |
 | **Email Client**              		 | [Thunderbird](https://www.thunderbird.net/) [⚙️](configs/thunderbird/catppuccin-mocha-lavender.xpi) |
 | **Screenshot Tool**           		 | [ShareX](https://getsharex.com/) [⚙️](configs/sharex/sharex.json) |
 | **File Manager**                       | [File Explorer](https://www.microsoft.com/en-us/windows/file-explorer) [⚙️](configs/explorer/) |
@@ -111,9 +111,10 @@ Here's all the information about my setup:
 
 <br>
 
-| 📚 Entry                              | ✨ Details                  |
-|---------------------------------------|--------------------------|
+| 📚 Entry                              | ✨ App                  |
+|---------------------------------------|---------------------------|
 | **Colorscheme**                       | [Catppuccin Mocha](https://catppuccin.com) |
+| **Browser**                           | [Zen Browser](https://zen-browser.app) |
 | **Font**                  			| [JetBrainsMono Nerd Font](https://www.jetbrains.com/lp/mono/) |
 | **Cursor Theme**                      | Custom cursors [⚙️](configs/explorer/cursor/) |
 | **Browser Styling**                   | userChrome & userContent CSS [⚙️](configs/browser/) |
@@ -161,9 +162,9 @@ Here's all the information about my setup:
 </details>
 
 <details>
-<summary><strong>🌐 Firefox Browser</strong></summary><br>
+<summary><strong>🌐 Zen Browser</strong></summary><br>
 
-**NOTE:** Works only on Firefox-based browsers.
+**NOTE:** Works on Firefox-based browsers (Zen Browser, Firefox, etc.).
 
 1. Enable stylesheets:
    - Open `about:config`
@@ -385,7 +386,15 @@ windots/
 
 ---
 
-## 📌 Notes
+## �️ Gallery
+
+| Your Setup |
+| ---------- |
+| ![Windots Setup](assets/setup.png) |
+
+---
+
+## �📌 Notes
 
 - All configurations are tailored to Windows 11
 - Most configs use **Catppuccin Mocha** colorscheme
