@@ -1,7 +1,7 @@
 <h1 align="center">🌾 windots</h1>
 
 <div align="center">
-  Minimal, riced Windows dotfiles for a Unix-like experience
+  <img src="assets/setup.png" alt="windots setup" width="100%"/>
 </div>
 
 ---
@@ -386,13 +386,6 @@ windots/
 
 ---
 
-## �️ Gallery
-
-| Your Setup |
-| ---------- |
-| ![Windots Setup](assets/setup.png) |
-
----
 
 ## �📌 Notes
 
