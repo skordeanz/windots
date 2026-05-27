@@ -39,7 +39,7 @@
     font-size: 14px;
     color: var(--text);
     font-weight: 600;
-    font-family: "JetBrainsMono Nerd Font";
+    font-family: "JetBrainsMono NF";
     margin: 0;
     padding: 0;
 }
@@ -288,7 +288,7 @@
  
 .taskbar-widget .app-icon{
     font-size: 12px;
-    padding: 0 0 0 10px;
+    padding: 0 0 0 0px;
 }
 
 .taskbar-widget .app-container{
@@ -325,7 +325,7 @@
 .volume-widget .icon {
     font-size: 16px;
 	color: var(--peach);
-    padding: 0 0 0 5px;
+    padding: 0 0 0 5cap;
 }
 .audio-menu {
     background-color: var(--mantle);
@@ -366,7 +366,7 @@
 .power-menu-widget .label {
 	color: var(--red);
 	font-size: 14px;
-    padding: 0 5px 0 0;
+    padding: 0 5px 0 2px;
 }
 .power-menu-popup {
 	background-color: transparent;
@@ -435,9 +435,11 @@
 
 /* Wallpaper caraousel */
 
-/*
 .wallpapers-widget {
-    padding: 0 5px;
+    background-color: #24273a;
+    border-radius: 15px;
+    height: 35px;
+    padding: 0 15px;
 }
 .wallpapers-gallery-window {
     background-color: rgba(85, 42, 240, 0.01);
@@ -467,4 +469,64 @@
 .wallpapers-gallery-image.focused {
     border: 4px solid var(--sapphire);
 }
-*/
+
+/* System tray */
+
+.systray {
+    background: #24273a;
+    border-radius: 15px;
+    height: 35px;
+    padding: 0 5px 0 2px;
+    margin: 0 10px 0 0;
+    display: flex;
+    align-items: center;
+}
+
+.systray .unpinned-container {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.systray .button {
+    background: transparent;
+    color: var(--text);
+    border-radius: 10px;
+    padding: 4px 6px;
+    margin: 0;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.systray .button:hover {
+    background: var(--surface1);
+    color: var(--lavender);
+}
+
+.systray .button[dragging=true] {
+    background: var(--sky);
+    color: var(--crust);
+    border: 1px solid var(--peach);
+}
+
+.systray .unpinned-visibility-btn {
+    background: transparent;
+    color: var(--subtext1);
+    border-radius: 10px;
+    padding: 4px 6px;
+    margin: 0;
+    font-size: 14px;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.systray .unpinned-visibility-btn:hover {
+    background: var(--surface1);
+    color: var(--lavender);
+}
+
+.systray .unpinned-visibility-btn.active {
+    background: var(--mauve);
+    color: var(--crust);
+}

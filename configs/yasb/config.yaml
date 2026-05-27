@@ -35,12 +35,14 @@ bars:
       ]
       center: [
         "clock",
+        "wallpapers"
       ]
       right: [
         "taskbar",
         "wifi",
         "volume",
         "battery",
+        "systray",
         "power_menu"
       ]
 widgets:
@@ -50,9 +52,9 @@ widgets:
       label: "<span>\ue62a</span>"
       menu_list:
       - { title: "User Home", path: "~" }
-      - { title: "Download", path: "C:\\Users\\ashis\\Downloads" }
-      - { title: "Documents", path: "C:\\Users\\ashis\\Documents" }
-      - { title: "Pictures", path: "C:\\Users\\ashis\\Pictures" }
+      - { title: "Download", path: "C:\\Users\\skord\\Downloads" }
+      - { title: "Documents", path: "C:\\Users\\skord\\OneDrive\\Documents" }
+      - { title: "Pictures", path: "C:\\Users\\skord\\OneDrive\\Pictures" }
       system_menu: true
       power_menu: true
       blur: true
@@ -228,7 +230,7 @@ widgets:
       animation_duration: 200
       button_row: 5
       buttons:
-        shutdown: ["\uf011", "Shut Down"]
+        shutdown: ["\uf011", "Shut Down"] #uf011 not working
         restart: ["\uead2", "Restart"]
         signout: ["\udb80\udf43", "Sign out"]
         hibernate: ["\uf28e", "Hibernate"]
@@ -238,19 +240,38 @@ widgets:
     type: "yasb.wallpapers.WallpapersWidget"
     options:
       label: "<span>\udb80\udee9</span>"
-      image_path: "C:\\Users\\ashis\\windots\\walls"
+      image_path: "C:\\windots\\walls"
       change_automatically: false
       update_interval: 60
       gallery:
         enabled: true
         blur: true
-        image_width: 296
+        image_width: 226
         image_per_page: 6
-        show_buttons: false
-        orientation: "portrait"
+        show_buttons: true
+        orientation: "landscape"
         image_spacing: 10
         lazy_load: true
-        lazy_load_delay: 10
-        lazy_load_fadein: 200
+        lazy_load_delay: 80
+        lazy_load_fadein: 400
         image_corner_radius: 20
         enable_cache: true
+  systray:
+    type: "yasb.systray.SystrayWidget"
+    options:
+      class_name: "systray"
+      pin_click_modifier: "ctrl"
+      show_unpinned: false
+      show_unpinned_button: true
+      show_battery: false
+      show_volume: false
+      show_network: false
+      icon_size: 12
+      label_collapsed: "󰁊"
+      label_expanded: "󰁒"
+      label_position: "right"
+      btn_shadow:
+        enabled: true
+        color: "black"
+        radius: 3
+        offset: [ 1, 1 ]
