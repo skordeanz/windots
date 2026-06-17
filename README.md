@@ -24,11 +24,15 @@ If you're into [**r/unixporn**](https://reddit.com/r/unixporn)-style setups and 
 - \>_ Sleek **Windows Terminal** config with custom styling
 - 🐚 **PowerShell** customization with profile
 - 🎨 **Oh My Posh** theme for beautiful prompts
-- ⚙️ **AutoHotkey** automation scripts with custom classes
+- 🔇 **AutoHotkey** volume & mute utilities
 - 🦅 Themeable **Start menu, Taskbar, and Notification center** via Windhawk
 - 🎯 **Nile Soft Shell** menu customization
-- 💫 Beautiful [**Wallpapers**](walls/)
+- 🎵 **Spicetify** Catppuccin-themed Spotify
+- 🎬 **mpv** powerful video player configs
+- ✏️ **Zed** editor configs
+- 💬 **Vencord** Discord theme
 - 🐈 [**Catppuccin**](https://github.com/catppuccin) everywhere
+- 💫 Beautiful [**Wallpapers**](walls/)
 
 ---
 
@@ -39,9 +43,8 @@ If you're into [**r/unixporn**](https://reddit.com/r/unixporn)-style setups and 
 - **Shell:** [PowerShell](https://learn.microsoft.com/en-us/powershell/) 🐚
 - **Terminal Emulator:** [Windows Terminal](https://github.com/microsoft/terminal) >_
 - **Panel:** [YASB](https://github.com/amnweb/yasb) ❄️
-- **Text Editor:** [VSCode](https://code.visualstudio.com/) ⌨️
+- **Editor:** [Zed](https://zed.dev/) ⌨️ & [VSCode](https://code.visualstudio.com/) ⌨️
 - **Automation:** [AutoHotkey](https://www.autohotkey.com/) 🤖
-- **System Monitor:** [btop4win](https://github.com/aristocratos/btop) 📊
 - **System Fetch:** [Fastfetch](https://github.com/fastfetch-cli/fastfetch) 📝
 - **Colorscheme:** [Catppuccin](https://catppuccin.com/) 🎨
 
@@ -66,8 +69,8 @@ Here's all the information about my setup:
 | **Window Manager** 			 		 | [GlazeWM](https://github.com/glzr-io/glazewm) [⚙️](configs/glazewm/config.yaml) |
 | **Status Bar** 				 		 | [YASB](https://github.com/amnweb/yasb) [⚙️](configs/yasb/) |
 | **UI Mods** 				 			 | [Windhawk](https://windhawk.net/) [⚙️](configs/windhawk/) |
-| **Shell Menu** 				 		 | [Nile Soft Shell](https://www.nilessoft.com/) [⚙️](configs/nilesoftshell/shell.nss) |
-| **Automation** 				 		 | [AutoHotkey](https://www.autohotkey.com/) [⚙️](configs/autohotkey/WindowsUtilities.ahk) |
+| **Shell Menu** 				 		 | [Nile Soft Shell](https://www.nilessoft.com/) [⚙️](configs/nilesoft/shell.nss) |
+| **Automation** 				 		 | [AutoHotkey](https://www.autohotkey.com/) [⚙️](configs/autohotkey/) |
 
 </details>
 
@@ -82,7 +85,6 @@ Here's all the information about my setup:
 | **Shell**                              | [PowerShell](https://learn.microsoft.com/en-us/powershell/) [⚙️](configs/powershell/Microsoft.PowerShell_profile.ps1) |
 | **Terminal Emulator**                  | [Windows Terminal](https://github.com/microsoft/terminal) [⚙️](configs/terminal/settings.json) |
 | **Shell Prompt**                       | [Oh My Posh](https://ohmyposh.dev/) [⚙️](configs/ohmyposh/zen.toml) |
-| **System Monitor**                     | [btop4win](https://github.com/aristocratos/btop) [⚙️](configs/btop4win/btop.conf) |
 | **System Fetch**                       | [Fastfetch](https://github.com/fastfetch-cli/fastfetch) [⚙️](configs/fastfetch/) |
 
 </details>
@@ -95,12 +97,13 @@ Here's all the information about my setup:
 
 | 📚 Entry                           	 | ✨ App                  |
 |----------------------------------------|--------------------------|
-| **Text Editor**              		     | [VSCode](https://code.visualstudio.com/) [⚙️](configs/vscode/settings.json) |
+| **Text Editor**              		     | [Zed](https://zed.dev/) [⚙️](configs/zed/) & [VSCode](https://code.visualstudio.com/) [⚙️](configs/vscode/settings.json) |
 | **Media Player**              		 | [qBittorrent](https://www.qbittorrent.org/) [⚙️](configs/qbittorrent/catppuccin-mocha.qbtheme) |
-| **Video Player**              		 | [mpv](https://mpv.io/) [⚙️](configs/mpvplayer/portable_config/) |
+| **Video Player**              		 | [mpv](https://mpv.io/) [⚙️](configs/mpvplayer/) |
 | **Web Browser**               	 	 | [Zen Browser](https://zen-browser.app/) [⚙️](configs/browser/) |
-| **Email Client**              		 | [Thunderbird](https://www.thunderbird.net/) [⚙️](configs/thunderbird/catppuccin-mocha-lavender.xpi) |
-| **Screenshot Tool**           		 | [ShareX](https://getsharex.com/) [⚙️](configs/sharex/sharex.json) |
+| **Email Client**              		 | [Thunderbird](https://www.thunderbird.net/) [⚙️](configs/thunderbird/) |
+| **Spotify Client**           		     | [Spicetify](https://spicetify.app/) [⚙️](configs/spicetify/) |
+| **Discord Client**           		     | [Vencord](https://vencord.dev/) [⚙️](configs/vencord/) |
 | **File Manager**                       | [File Explorer](https://www.microsoft.com/en-us/windows/file-explorer) [⚙️](configs/explorer/) |
 
 </details>
@@ -201,7 +204,7 @@ Paste configs via:
 <summary><strong>🎯 Nile Soft Shell</strong></summary><br>
 
 - Install [Nile Soft Shell](https://www.nilessoft.com/)
-- Copy config: [`configs/nilesoftshell/shell.nss`](configs/nilesoftshell/shell.nss)
+- Copy config: [`configs/nilesoft/shell.nss`](configs/nilesoft/shell.nss)
 - Place in: `%APPDATA%\Nile Soft Shell\`
 
 </details>
@@ -239,20 +242,7 @@ Theme initialization is included in the PowerShell profile.
 
 </details>
 
-<details> 
-<summary><strong>📊 btop4win</strong></summary><br>
-
-- Install:
-  ```powershell
-  winget install btop
-  ```
-
-- Copy config: [`configs/btop4win/btop.conf`](configs/btop4win/btop.conf)
-- Place in: `%APPDATA%\btop4win\`
-
-</details>
-
-<details> 
+<details>
 <summary><strong>📝 Fastfetch</strong></summary><br>
 
 - Install:
@@ -270,17 +260,13 @@ Theme initialization is included in the PowerShell profile.
 
 - Install [AutoHotkey v2](https://www.autohotkey.com/)
 - Copy scripts: [`configs/autohotkey/`](configs/autohotkey/)
-- Run `WindowsUtilities.ahk` or add to startup:
+- Run `AppVol.ahk` or add to startup:
   - Press `Win + R`, type `shell:startup`
-  - Create shortcut to `WindowsUtilities.ahk`
+  - Create shortcut to `AppVol.ahk`
 
-**Features:**
-- App Launcher
-- Desktop Icon Toggle
-- Explorer Dialog enhancements
-- Quick Note Taker
-- Text Expander
-- Todo list manager
+**Utilities:**
+- AppVol.ahk - Application volume quick controls
+- mute-global.ahk - Global microphone mute toggle
 
 </details>
 
@@ -297,7 +283,7 @@ Theme initialization is included in the PowerShell profile.
 <summary><strong>🎬 mpv Player</strong></summary><br>
 
 - Install [mpv](https://mpv.io/)
-- Copy configs: [`configs/mpvplayer/portable_config/`](configs/mpvplayer/portable_config/)
+- Copy configs: [`configs/mpvplayer/`](configs/mpvplayer/)
 - Place in: `%APPDATA%\mpv\`
 
 </details>
@@ -306,17 +292,35 @@ Theme initialization is included in the PowerShell profile.
 <summary><strong>📧 Thunderbird</strong></summary><br>
 
 - Install [Thunderbird](https://www.thunderbird.net/)
-- Copy theme: [`configs/thunderbird/catppuccin-mocha-lavender.xpi`](configs/thunderbird/catppuccin-mocha-lavender.xpi)
-- Open Thunderbird → Add-ons → Install from file
+- Copy Chrome theme: [`configs/thunderbird/chrome/`](configs/thunderbird/chrome/)
+- Place in: `%APPDATA%\Thunderbird\Profiles\<profile>\chrome\`
 
 </details>
 
 <details>
-<summary><strong>📸 ShareX</strong></summary><br>
+<summary><strong>🎵 Spicetify</strong></summary><br>
 
-- Install [ShareX](https://getsharex.com/)
-- Copy config: [`configs/sharex/sharex.json`](configs/sharex/sharex.json)
-- Place in: `%APPDATA%\ShareX\`
+- Install [Spicetify](https://spicetify.app/)
+- Copy config: [`configs/spicetify/spicetify-marketplace.json`](configs/spicetify/spicetify-marketplace.json)
+- Place in: `%APPDATA%\spicetify\`
+
+</details>
+
+<details>
+<summary><strong>💬 Vencord</strong></summary><br>
+
+- Install [Vencord](https://vencord.dev/)
+- Copy settings: [`configs/vencord/vencord-settings.json`](configs/vencord/vencord-settings.json)
+- Import in Vencord settings
+
+</details>
+
+<details>
+<summary><strong>✏️ Zed</strong></summary><br>
+
+- Install [Zed](https://zed.dev/)
+- Copy configs: [`configs/zed/`](configs/zed/)
+- Place in: `%APPDATA%\Zed\`
 
 </details>
 
@@ -340,20 +344,13 @@ Theme initialization is included in the PowerShell profile.
 
 ---
 
-## ⌨️ AutoHotkey Keybindings
+## 🔇 AutoHotkey Keybindings
 
-Quick reference for AutoHotkey automation scripts:
+Quick reference for AutoHotkey scripts:
 
-**Global Utilities:**
-- Customize in: [`configs/autohotkey/WindowsUtilities.ahk`](configs/autohotkey/WindowsUtilities.ahk)
-
-**Available Classes:**
-- AppLauncher - Quick app launching
-- DesktopIconToggle - Toggle desktop icons visibility
-- ExplorerDialog - Enhanced file explorer dialogs
-- QuickNoteTaker - Quick note taking
-- TextExpander - Text shortcuts and expansion
-- Todo - Simple todo list management
+**Utilities:**
+- [`configs/autohotkey/AppVol.ahk`](configs/autohotkey/AppVol.ahk) - Application volume quick controls
+- [`configs/autohotkey/mute-global.ahk`](configs/autohotkey/mute-global.ahk) - Global microphone mute toggle
 
 ---
 
@@ -362,26 +359,26 @@ Quick reference for AutoHotkey automation scripts:
 ```
 windots/
 ├── configs/
-│   ├── autohotkey/              # AutoHotkey scripts & classes
+│   ├── autohotkey/              # AutoHotkey volume & mute scripts
 │   ├── browser/                 # Firefox userChrome & userContent
-│   ├── btop4win/                # System monitor config & themes
 │   ├── explorer/                # Cursors, themes, blur effects
 │   ├── fastfetch/               # System fetch configs
 │   ├── glazewm/                 # Tiling window manager
 │   ├── mpvplayer/               # Video player config
-│   ├── nilesoftshell/           # Shell menu customization
+│   ├── nilesoft/                # Shell menu customization
 │   ├── ohmyposh/                # Prompt theme
 │   ├── powershell/              # PowerShell profile
 │   ├── qbittorrent/             # Torrent client theme
-│   ├── sharex/                  # Screenshot tool config
+│   ├── spicetify/               # Spotify customization
 │   ├── stylus/                  # Firefox styling
 │   ├── terminal/                # Windows Terminal settings
-│   ├── thunderbird/             # Email client theme
+│   ├── thunderbird/             # Email client chrome theme
+│   ├── vencord/                 # Discord theme settings
 │   ├── vscode/                  # VS Code settings
 │   ├── windhawk/                # Windows UI mods
-│   └── yasb/                    # Status bar config
+│   ├── yasb/                    # Status bar config
+│   └── zed/                     # Zed editor configs
 └── walls/                       # Wallpapers
-
 ```
 
 ---
