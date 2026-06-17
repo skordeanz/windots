@@ -28,33 +28,19 @@ bars:
       bottom: 0
       right: 0
     widgets:
-      left: [
-        "home",
-        "glazewm_workspaces",
-        "media"
-      ]
-      center: [
-        "clock",
-        "wallpapers"
-      ]
-      right: [
-        "taskbar",
-        "wifi",
-        "volume",
-        "battery",
-        "systray",
-        "power_menu"
-      ]
+      left: ["home", "glazewm_workspaces", "media"]
+      center: ["clock", "wallpapers"]
+      right: ["taskbar", "wifi", "volume", "battery", "systray", "power_menu"]
 widgets:
   home:
     type: "yasb.home.HomeWidget"
     options:
       label: "<span>\ue62a</span>"
       menu_list:
-      - { title: "User Home", path: "~" }
-      - { title: "Download", path: "C:\\Users\\skord\\Downloads" }
-      - { title: "Documents", path: "C:\\Users\\skord\\OneDrive\\Documents" }
-      - { title: "Pictures", path: "C:\\Users\\skord\\OneDrive\\Pictures" }
+        - { title: "User Home", path: "~" }
+        - { title: "Download", path: "C:\\Users\\skord\\Downloads" }
+        - { title: "Documents", path: "C:\\Users\\skord\\OneDrive\\Documents" }
+        - { title: "Pictures", path: "C:\\Users\\skord\\OneDrive\\Pictures" }
       system_menu: true
       power_menu: true
       blur: true
@@ -62,7 +48,7 @@ widgets:
       round_corners_type: "normal"
       border_color: "#585b70"
       distance: 6
-      container_padding: 
+      container_padding:
         top: 0
         left: 0
         bottom: 0
@@ -131,20 +117,20 @@ widgets:
         enabled: true
         color: "black"
         radius: 3
-        offset: [ 1, 1 ]
+        offset: [1, 1]
   clock:
     type: "yasb.clock.ClockWidget"
     options:
       label: "<span>\uf017</span> {%a %d %b %H:%M }"
       label_alt: "{%A %d %B %Y %H:%M:%S}"
       timezones: []
-    calendar: 
+    calendar:
       blur: True
       round_corners: True
-      round_corners_type: 'normal'
+      round_corners_type: "normal"
       border_color: "#585b70"
-      alignment: 'center'
-      direction: 'down'
+      alignment: "center"
+      direction: "down"
       distance: 6
   taskbar:
     type: "yasb.taskbar.TaskbarWidget"
@@ -178,13 +164,14 @@ widgets:
         on_left: "exec explorer ms-availablenetworks:"
         on_middle: "do_nothing"
         on_right: "toggle_label"
-      wifi_icons: [
-        "\udb82\udd2e",
-        "\udb82\udd1f",
-        "\udb82\udd22",
-        "\udb82\udd25",
-        "\udb82\udd28" 
-      ]
+      wifi_icons:
+        [
+          "\udb82\udd2e",
+          "\udb82\udd1f",
+          "\udb82\udd22",
+          "\udb82\udd25",
+          "\udb82\udd28",
+        ]
   weather:
     type: "yasb.weather.WeatherWidget"
     options:
@@ -274,4 +261,4 @@ widgets:
         enabled: true
         color: "black"
         radius: 3
-        offset: [ 1, 1 ]
+        offset: [1, 1]

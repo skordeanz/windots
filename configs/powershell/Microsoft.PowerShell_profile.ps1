@@ -1,6 +1,6 @@
 $PSVersionTable.PSEdition -ne 'Core' | Out-Null
 
-oh-my-posh init pwsh --config 'C:\Users\skord\.config\ohmyposh\zen.toml' | Invoke-Expression
+oh-my-posh init pwsh --config 'C:\Users\Jerry\.config\ohmyposh\zen.toml' | Invoke-Expression
 
 # terminal icons
 Import-Module -Name Terminal-Icons
