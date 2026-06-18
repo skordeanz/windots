@@ -227,7 +227,7 @@ widgets:
     type: "yasb.wallpapers.WallpapersWidget"
     options:
       label: "<span>\udb80\udee9</span>"
-      image_path: "C:\\windots\\walls"
+      image_path: "C:\\windots\\wallpapers"
       change_automatically: false
       update_interval: 60
       gallery:
