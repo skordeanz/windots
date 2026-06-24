@@ -98,8 +98,8 @@ Here's all the information about my setup:
 | 📚 Entry                           	 | ✨ App                  |
 |----------------------------------------|--------------------------|
 | **Text Editor**              		     | [Zed](https://zed.dev/) [⚙️](configs/zed/) & [VSCode](https://code.visualstudio.com/) [⚙️](configs/vscode/settings.json) |
-| **Media Player**              		 | [qBittorrent](https://www.qbittorrent.org/) [⚙️](configs/qbittorrent/catppuccin-mocha.qbtheme) |
-| **Video Player**              		 | [mpv](https://mpv.io/) [⚙️](configs/mpvplayer/) |
+| **Torrent Client**            		 | [qBittorrent](https://www.qbittorrent.org/) [⚙️](configs/qbittorrent/catppuccin-mocha.qbtheme) |
+| **Media Player**              		 | [mpv](https://mpv.io/) [⚙️](configs/mpvplayer/) |
 | **Web Browser**               	 	 | [Zen Browser](https://zen-browser.app/) [⚙️](configs/browser/) |
 | **Email Client**              		 | [Thunderbird](https://www.thunderbird.net/) [⚙️](configs/thunderbird/) |
 | **Spotify Client**           		     | [Spicetify](https://spicetify.app/) [⚙️](configs/spicetify/) |
@@ -120,8 +120,8 @@ Here's all the information about my setup:
 | **Browser**                           | [Zen Browser](https://zen-browser.app) |
 | **Font**                  			| [JetBrainsMono Nerd Font](https://www.jetbrains.com/lp/mono/) |
 | **Cursor Theme**                      | Custom cursors [⚙️](configs/explorer/cursor/) |
-| **Browser Styling**                   | userChrome & userContent CSS [⚙️](configs/browser/) |
-| **Shell Enhancement**                 | [Stylus](https://addons.mozilla.org/firefox/addon/styl-us/) [⚙️](configs/stylus/) |
+| **Zen Browser Styling**               | userChrome & userContent CSS [⚙️](configs/browser/) |
+| **Browser Extension**                 | [Stylus](https://addons.mozilla.org/firefox/addon/styl-us/) [⚙️](configs/stylus/) |
 | **Explorer Blur**                     | Windows Explorer transparency [⚙️](configs/explorer/explorer-blur/) |
 
 </details>
@@ -167,7 +167,7 @@ Here's all the information about my setup:
 <details>
 <summary><strong>🌐 Zen Browser</strong></summary><br>
 
-**NOTE:** Works on Firefox-based browsers (Zen Browser, Firefox, etc.).
+**NOTE:** This styling is intended for Zen Browser only.
 
 1. Enable stylesheets:
    - Open `about:config`
@@ -360,7 +360,7 @@ Quick reference for AutoHotkey scripts:
 windots/
 ├── configs/
 │   ├── autohotkey/              # AutoHotkey volume & mute scripts
-│   ├── browser/                 # Firefox userChrome & userContent
+│   ├── browser/                 # Zen Browser userChrome & userContent
 │   ├── explorer/                # Cursors, themes, blur effects
 │   ├── fastfetch/               # System fetch configs
 │   ├── glazewm/                 # Tiling window manager
@@ -370,7 +370,7 @@ windots/
 │   ├── powershell/              # PowerShell profile
 │   ├── qbittorrent/             # Torrent client theme
 │   ├── spicetify/               # Spotify customization
-│   ├── stylus/                  # Firefox styling
+│   ├── stylus/                  # Stylus browser extension styles
 │   ├── terminal/                # Windows Terminal settings
 │   ├── thunderbird/             # Email client chrome theme
 │   ├── vencord/                 # Discord theme settings
