@@ -671,5 +671,5 @@
             "settingsSyncVersion": 1781614475907
         }
     },
-    "quickCss": "@import url(\"https://catppuccin.github.io/discord/dist/catppuccin-mocha-pink.theme.css\");"
+    "quickCss": "@import url(\"https://catppuccin.github.io/discord/dist/catppuccin-mocha.theme.css\")"
 }

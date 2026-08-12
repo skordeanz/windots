@@ -1,202 +1,117 @@
 {
-    "$help": "https://aka.ms/terminal-documentation",
-    "$schema": "https://aka.ms/terminal-profiles-schema",
-    "actions": 
-    [
-        {
-            "command": 
-            {
-                "action": "copy",
-                "singleLine": false
-            },
-            "id": "User.copy.644BA8F2"
-        },
-        {
-            "command": "paste",
-            "id": "User.paste"
-        },
-        {
-            "command": "find",
-            "id": "User.find"
-        },
-        {
-            "command": 
-            {
-                "action": "splitPane",
-                "split": "auto",
-                "splitMode": "duplicate"
-            },
-            "id": "User.splitPane.A6751878"
-        },
-        {
-            "command": 
-            {
-                "action": "closeTab"
-            },
-            "id": "User.closeTab.0"
-        }
-    ],
-    "autoHideWindow": false,
-    "centerOnLaunch": false,
-    "copyFormatting": "none",
-    "copyOnSelect": false,
-    "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-    "initialCols": 55,
-    "initialPosition": ",",
-    "initialRows": 22,
-    "keybindings": 
-    [
-        {
-            "id": "Terminal.OpenNewTab",
-            "keys": "ctrl+t"
-        },
-        {
-            "id": "User.copy.644BA8F2",
-            "keys": "ctrl+c"
-        },
-        {
-            "id": "User.paste",
-            "keys": "ctrl+v"
-        },
-        {
-            "id": "User.find",
-            "keys": "ctrl+shift+f"
-        },
-        {
-            "id": "User.splitPane.A6751878",
-            "keys": "alt+shift+d"
-        },
-        {
-            "id": null,
-            "keys": "ctrl+shift+t"
-        },
-        {
-            "id": "User.closeTab.0",
-            "keys": "ctrl+w"
-        }
-    ],
-    "launchMode": "focus",
-    "newTabMenu": 
-    [
-        {
-            "type": "remainingProfiles"
-        }
-    ],
-    "profiles": 
-    {
-        "defaults": 
-        {
-            "colorScheme": "Catppuccin Mocha",
-            "cursorShape": "filledBox",
-            "elevate": false,
-            "font": 
-            {
-                "cellHeight": "1.3",
-                "face": "JetBrainsMono Nerd Font",
-                "size": 13
-            },
-            "opacity": 100
-        },
-        "list": 
-        [
-            {
-                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -nologo",
-                "font": 
-                {
-                    "cellHeight": "1.3",
-                    "size": 13
-                },
-                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-                "hidden": false,
-                "name": "Windows PowerShell",
-                "opacity": 100,
-                "padding": "10",
-                "scrollbarState": "hidden"
-            },
-            {
-                "commandline": "%SystemRoot%\\System32\\cmd.exe",
-                "font": 
-                {
-                    "cellHeight": "1.3",
-                    "size": 13
-                },
-                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
-                "hidden": false,
-                "name": "Command Prompt",
-                "opacity": 100,
-                "padding": "10",
-                "scrollbarState": "hidden"
-            },
-            {
-                "font": 
-                {
-                    "cellHeight": "1.3",
-                    "size": 13
-                },
-                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
-                "hidden": false,
-                "name": "Azure Cloud Shell",
-                "padding": "15",
-                "source": "Windows.Terminal.Azure"
-            }
-        ]
-    },
-    "schemes": 
-    [
-        {
-            "background": "#1E1E2E",
-            "black": "#45475A",
-            "blue": "#89B4FA",
-            "brightBlack": "#585B70",
-            "brightBlue": "#89B4FA",
-            "brightCyan": "#94E2D5",
-            "brightGreen": "#A6E3A1",
-            "brightPurple": "#F5C2E7",
-            "brightRed": "#F38BA8",
-            "brightWhite": "#A6ADC8",
-            "brightYellow": "#F9E2AF",
-            "cursorColor": "#CDD6F4",
-            "cyan": "#94E2D5",
-            "foreground": "#CDD6F4",
-            "green": "#A6E3A1",
-            "name": "Catppuccin Mocha",
-            "purple": "#F5C2E7",
-            "red": "#F38BA8",
-            "selectionBackground": "#585B70",
-            "white": "#BAC2DE",
-            "yellow": "#F9E2AF"
-        }
-    ],
-    "showTabsInTitlebar": true,
-    "showTerminalTitleInTitlebar": false,
-    "tabSwitcherMode": "mru",
-    "themes": 
-    [
-        {
-            "name": "Catppuccin Macchiato",
-            "tab": 
-            {
-                "background": "#1E1E2EFF",
-                "iconStyle": "default",
-                "showCloseButton": "always",
-                "unfocusedBackground": null
-            },
-            "tabRow": 
-            {
-                "background": "#181825FF",
-                "unfocusedBackground": "#11111BFF"
-            },
-            "window": 
-            {
-                "applicationTheme": "dark",
-                "experimental.rainbowFrame": false,
-                "frame": null,
-                "unfocusedFrame": null,
-                "useMica": true
-            }
-        }
-    ],
-    "useAcrylicInTabRow": true,
-    "warning.confirmCloseAllTabs": false,
-    "windowingBehavior": "useNew"
+    "$help":  "https://aka.ms/terminal-documentation",
+    "$schema":  "https://aka.ms/terminal-profiles-schema",
+    "actions":  [
+                    {
+                        "command":  {
+                                        "action":  "closeTab"
+                                    },
+                        "id":  "User.closeTab.0"
+                    }
+                ],
+    "copyFormatting":  "none",
+    "copyOnSelect":  false,
+    "defaultProfile":  "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+    "keybindings":  [
+                        {
+                            "id":  "Terminal.CopyToClipboard",
+                            "keys":  "ctrl+c"
+                        },
+                        {
+                            "id":  "Terminal.PasteFromClipboard",
+                            "keys":  "ctrl+v"
+                        },
+                        {
+                            "id":  "Terminal.DuplicatePaneAuto",
+                            "keys":  "alt+shift+d"
+                        },
+                        {
+                            "id":  "User.closeTab.0",
+                            "keys":  "ctrl+w"
+                        }
+                    ],
+    "newTabMenu":  [
+                       {
+                           "type":  "remainingProfiles"
+                       }
+                   ],
+    "profiles":  {
+                     "defaults":  {
+                                      "font":  {
+                                                   "face":  "JetBrainsMono Nerd Font"
+                                               },
+                                      "colorScheme":  "Winmarchy Catppuccin"
+                                  },
+                     "list":  [
+                                  {
+                                      "commandline":  "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -NoLogo",
+                                      "guid":  "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                                      "hidden":  false,
+                                      "name":  "Windows PowerShell"
+                                  },
+                                  {
+                                      "commandline":  "%SystemRoot%\\System32\\cmd.exe",
+                                      "guid":  "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                                      "hidden":  false,
+                                      "name":  "Command Prompt"
+                                  },
+                                  {
+                                      "guid":  "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+                                      "hidden":  false,
+                                      "name":  "Azure Cloud Shell",
+                                      "source":  "Windows.Terminal.Azure"
+                                  }
+                              ]
+                 },
+    "themes":  [
+
+               ],
+    "schemes":  [
+                    {
+                        "name":  "Winmarchy Tokyo Night",
+                        "background":  "#1a1b26",
+                        "foreground":  "#a9b1d6",
+                        "cursorColor":  "#c0caf5",
+                        "selectionBackground":  "#292e42",
+                        "black":  "#1a1b26",
+                        "red":  "#f7768e",
+                        "green":  "#9ece6a",
+                        "yellow":  "#e0af68",
+                        "blue":  "#7aa2f7",
+                        "purple":  "#ad8ee6",
+                        "cyan":  "#449dab",
+                        "white":  "#a9b1d6",
+                        "brightBlack":  "#414868",
+                        "brightRed":  "#ff7a93",
+                        "brightGreen":  "#b9f27c",
+                        "brightYellow":  "#ff9e64",
+                        "brightBlue":  "#7da6ff",
+                        "brightPurple":  "#bb9af7",
+                        "brightCyan":  "#0db9d7",
+                        "brightWhite":  "#c0caf5"
+                    },
+                    {
+                        "name":  "Winmarchy Catppuccin",
+                        "background":  "#1e1e2e",
+                        "foreground":  "#cdd6f4",
+                        "cursorColor":  "#cdd6f4",
+                        "selectionBackground":  "#45475a",
+                        "black":  "#1e1e2e",
+                        "red":  "#f38ba8",
+                        "green":  "#a6e3a1",
+                        "yellow":  "#f9e2af",
+                        "blue":  "#89b4fa",
+                        "purple":  "#f5c2e7",
+                        "cyan":  "#94e2d5",
+                        "white":  "#cdd6f4",
+                        "brightBlack":  "#585b70",
+                        "brightRed":  "#f38ba8",
+                        "brightGreen":  "#a6e3a1",
+                        "brightYellow":  "#f9e2af",
+                        "brightBlue":  "#89b4fa",
+                        "brightPurple":  "#f5c2e7",
+                        "brightCyan":  "#94e2d5",
+                        "brightWhite":  "#cdd6f4"
+                    }
+                ]
 }

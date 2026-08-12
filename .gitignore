@@ -1,0 +1,8 @@
+# Flow Launcher runtime artifacts
+configs/flowlauncher/Settings/History.json
+configs/flowlauncher/Settings/History.json.bak
+configs/flowlauncher/Settings/MultipleTopMostRecord.json
+configs/flowlauncher/Settings/MultipleTopMostRecord.json.bak
+configs/flowlauncher/Settings/UserSelectedRecord.json
+configs/flowlauncher/Settings/UserSelectedRecord.json.bak
+configs/flowlauncher/Settings/**/*.bak

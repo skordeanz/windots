@@ -20,8 +20,10 @@ If you're into [**r/unixporn**](https://reddit.com/r/unixporn)-style setups and 
 
 - 🪟 **GlazeWM** tiling window manager setup
 - ❄️ Beautiful **YASB** status bar config
+- 🚀 **Flow Launcher** launcher configs with Catppuccin theme
 - 🌸 Minimal **VSCode** setup with Catppuccin theme
 - \>_ Sleek **Windows Terminal** config with custom styling
+- ⚡ **Alacritty** terminal config with Catppuccin theme
 - 🐚 **PowerShell** customization with profile
 - 🎨 **Oh My Posh** theme for beautiful prompts
 - 🔇 **AutoHotkey** volume & mute utilities
@@ -32,7 +34,7 @@ If you're into [**r/unixporn**](https://reddit.com/r/unixporn)-style setups and 
 - ✏️ **Zed** editor configs
 - 💬 **Vencord** Discord theme
 - 🐈 [**Catppuccin**](https://github.com/catppuccin) everywhere
-- 💫 Beautiful [**Wallpapers**](walls/)
+- 💫 Beautiful [**Wallpapers**](wallpapers/)
 
 ---
 
@@ -41,7 +43,8 @@ If you're into [**r/unixporn**](https://reddit.com/r/unixporn)-style setups and 
 - **OS:** [Windows 11](https://www.microsoft.com/en-us/windows/windows-11) 🪟
 - **WM:** [GlazeWM](https://github.com/glzr-io/glazewm) ✨
 - **Shell:** [PowerShell](https://learn.microsoft.com/en-us/powershell/) 🐚
-- **Terminal Emulator:** [Windows Terminal](https://github.com/microsoft/terminal) >_
+- **Terminal Emulator:** [Windows Terminal](https://github.com/microsoft/terminal) >_ & [Alacritty](https://alacritty.org/) ⚡
+- **Launcher:** [Flow Launcher](https://github.com/Flow-Launcher/Flow.Launcher) 🚀
 - **Panel:** [YASB](https://github.com/amnweb/yasb) ❄️
 - **Editor:** [Zed](https://zed.dev/) ⌨️ & [VSCode](https://code.visualstudio.com/) ⌨️
 - **Automation:** [AutoHotkey](https://www.autohotkey.com/) 🤖
@@ -83,7 +86,7 @@ Here's all the information about my setup:
 | 📚 Entry                           	 | ✨ App                  |
 |----------------------------------------|--------------------------|
 | **Shell**                              | [PowerShell](https://learn.microsoft.com/en-us/powershell/) [⚙️](configs/powershell/Microsoft.PowerShell_profile.ps1) |
-| **Terminal Emulator**                  | [Windows Terminal](https://github.com/microsoft/terminal) [⚙️](configs/terminal/settings.json) |
+| **Terminal Emulator**                  | [Windows Terminal](https://github.com/microsoft/terminal) [⚙️](configs/terminal/settings.json) & [Alacritty](https://alacritty.org/) [⚙️](configs/alacritty/alacritty.toml) |
 | **Shell Prompt**                       | [Oh My Posh](https://ohmyposh.dev/) [⚙️](configs/ohmyposh/zen.toml) |
 | **System Fetch**                       | [Fastfetch](https://github.com/fastfetch-cli/fastfetch) [⚙️](configs/fastfetch/) |
 
@@ -98,6 +101,7 @@ Here's all the information about my setup:
 | 📚 Entry                           	 | ✨ App                  |
 |----------------------------------------|--------------------------|
 | **Text Editor**              		     | [Zed](https://zed.dev/) [⚙️](configs/zed/) & [VSCode](https://code.visualstudio.com/) [⚙️](configs/vscode/settings.json) |
+| **Launcher**                 		     | [Flow Launcher](https://github.com/Flow-Launcher/Flow.Launcher) [⚙️](configs/flowlauncher/) |
 | **Torrent Client**            		 | [qBittorrent](https://www.qbittorrent.org/) [⚙️](configs/qbittorrent/catppuccin-mocha.qbtheme) |
 | **Media Player**              		 | [mpv](https://mpv.io/) [⚙️](configs/mpvplayer/) |
 | **Web Browser**               	 	 | [Zen Browser](https://zen-browser.app/) [⚙️](configs/browser/) |
@@ -215,6 +219,25 @@ Paste configs via:
 - Install [Windows Terminal](https://github.com/microsoft/terminal)
 - Copy settings: [`configs/terminal/settings.json`](configs/terminal/settings.json)
 - Place in: `%LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\`
+
+</details>
+
+<details>
+<summary><strong>⚡ Alacritty</strong></summary><br>
+
+- Install [Alacritty](https://alacritty.org/)
+- Copy config: [`configs/alacritty/alacritty.toml`](configs/alacritty/alacritty.toml)
+- Place in: `%APPDATA%\alacritty\`
+
+</details>
+
+<details>
+<summary><strong>🚀 Flow Launcher</strong></summary><br>
+
+- Install [Flow Launcher](https://github.com/Flow-Launcher/Flow.Launcher)
+- Copy configs: [`configs/flowlauncher/`](configs/flowlauncher/)
+- Place in: `%APPDATA%\FlowLauncher\`
+- Includes the **Catppuccin Mocha** theme (`Themes/Catppuccin Mocha.xaml`)
 
 </details>
 
@@ -359,16 +382,19 @@ Quick reference for AutoHotkey scripts:
 ```
 windots/
 ├── configs/
+│   ├── alacritty/               # Alacritty terminal config
 │   ├── autohotkey/              # AutoHotkey volume & mute scripts
 │   ├── browser/                 # Zen Browser userChrome & userContent
 │   ├── explorer/                # Cursors, themes, blur effects
 │   ├── fastfetch/               # System fetch configs
+│   ├── flowlauncher/            # Flow Launcher configs & Catppuccin theme
 │   ├── glazewm/                 # Tiling window manager
 │   ├── mpvplayer/               # Video player config
 │   ├── nilesoft/                # Shell menu customization
 │   ├── ohmyposh/                # Prompt theme
 │   ├── powershell/              # PowerShell profile
 │   ├── qbittorrent/             # Torrent client theme
+│   ├── raycast/                 # Raycast launcher config
 │   ├── spicetify/               # Spotify customization
 │   ├── stylus/                  # Stylus browser extension styles
 │   ├── terminal/                # Windows Terminal settings
@@ -378,7 +404,7 @@ windots/
 │   ├── windhawk/                # Windows UI mods
 │   ├── yasb/                    # Status bar config
 │   └── zed/                     # Zed editor configs
-└── walls/                       # Wallpapers
+└── wallpapers/                  # Wallpapers
 ```
 
 ---
