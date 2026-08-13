@@ -38,9 +38,9 @@ widgets:
       label: "<span>\ue62a</span>"
       menu_list:
         - { title: "User Home", path: "~" }
-        - { title: "Download", path: "C:\\Users\\Jerry\\Downloads" }
-        - { title: "Documents", path: "C:\\Users\\Jerry\\OneDrive\\Documents" }
-        - { title: "Pictures", path: "C:\\Users\\Jerry\\OneDrive\\Pictures" }
+        - { title: "Download", path: "C:\\Users\\Skordean\\Downloads" }
+        - { title: "Documents", path: "C:\\Users\\Skordean\\Documents" }
+        - { title: "Pictures", path: "C:\\Users\\Skordean\\Pictures" }
       system_menu: true
       power_menu: true
       blur: true
